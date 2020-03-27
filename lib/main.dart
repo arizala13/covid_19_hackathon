@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'screens/community_screen.dart';
+import 'screens/healthcare_screen.dart';
+import 'screens/news_screen.dart';
 
 void main() {
   runApp(MyApp());
