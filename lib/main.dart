@@ -48,9 +48,9 @@ class Choice {
 }
 
 const List<Choice> choices = const <Choice>[
+  const Choice(title: 'News', icon: Icons.check_circle),
   const Choice(title: 'Healthcare', icon: Icons.business),
   const Choice(title: 'Community', icon: Icons.home),
-  const Choice(title: 'News', icon: Icons.check_circle),
 ];
 
 class ChoiceCard extends StatelessWidget {
