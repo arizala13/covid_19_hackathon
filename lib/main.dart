@@ -16,9 +16,21 @@ class MyApp extends StatelessWidget {
             title: const Text('Community healthcare connected'),
             bottom: TabBar(
               tabs: [
-                Tab(icon: Icon(Icons.business)),
-                Tab(icon: Icon(Icons.home)),
-                Tab(icon: Icon(Icons.check_circle)),
+                GestureDetector(        
+                  onTap: (){
+                    print("Healthcare clicked");
+                    }, child: Tab(icon: Icon(Icons.business,), text: "Healthcare")
+                  ),
+                GestureDetector(        
+                  onTap: (){
+                    Navigator.pushNamed(context, '/community_screen');
+                    }, child:Tab(icon: Icon(Icons.home), text: "Community")
+                  ),
+                GestureDetector(        
+                  onTap: (){
+                    print("News clicked");
+                    }, child:Tab(icon: Icon(Icons.check_circle), text: "News"),
+                  ),
               ],
             ),
           ),
