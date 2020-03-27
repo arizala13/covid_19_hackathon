@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Here I will add the community posts 
+// Here will be the community posts 
 // Things like help wanted and help needed 
 
 
@@ -16,7 +16,7 @@ class _CommunityViewScreenState extends State<CommunityViewScreen> {
     Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Journal"),
+        title: Text("COMMUNITY!!!"),
         backgroundColor: Colors.teal,
       ),
     );
