@@ -1,63 +1,75 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      home: DefaultTabController(
+        length: choices.length,
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text('Community healthcare connected'),
+            bottom: TabBar(
+              isScrollable: true,
+              tabs: choices.map((Choice choice) {
+                return Tab(
+                  text: choice.title,
+                  icon: Icon(choice.icon),
+                );
+              }).toList(),
+            ),
+          ),
+          body: TabBarView(
+            children: choices.map((Choice choice) {
+              return Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: ChoiceCard(choice: choice),
+              );
+            }).toList(),
+          ),
+        ),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class Choice {
+  const Choice({this.title, this.icon});
 
   final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
+  final IconData icon;
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+const List<Choice> choices = const <Choice>[
+  const Choice(title: 'Healthcare', icon: Icons.business),
+  const Choice(title: 'Community', icon: Icons.home),
+  const Choice(title: 'News', icon: Icons.check_circle),
+];
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class ChoiceCard extends StatelessWidget {
+  const ChoiceCard({Key key, this.choice}) : super(key: key);
+
+  final Choice choice;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
+    final TextStyle textStyle = Theme.of(context).textTheme.display1;
+    return Card(
+      color: Colors.white,
+      child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            Icon(choice.icon, size: 128.0, color: textStyle.color),
+            Text(choice.title, style: textStyle),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), 
     );
   }
 }
