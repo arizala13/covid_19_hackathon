@@ -36,11 +36,30 @@ class MyHome extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            title: Text(
-              'Community Tree',
-              style: GoogleFonts.raleway(
-                textStyle: TextStyle(color: Colors.white, letterSpacing: .5),
+            backgroundColor: Colors.indigo[800],
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+              Image.asset(
+                 'assets/images/Logo_Color.png',
+                  fit: BoxFit.contain,
+                  height: 35,
+                  color: Colors.white,
               ),
+              Center(
+                    child: Container(
+                      margin: EdgeInsets.all(1.0),
+                      width: 8.0,
+                      height: 8.0,
+                    ),
+                  ),
+                Text(
+                  'Community Tree',
+                  style: GoogleFonts.raleway(
+                    textStyle: TextStyle(color: Colors.white, letterSpacing: .75),
+                  ),
+                ),
+              ],
             ),
             bottom: TabBar(
               tabs: [

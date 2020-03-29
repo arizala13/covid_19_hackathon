@@ -18,7 +18,7 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("News"),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.indigo[800],
       ),
       body: RepaintBoundary(
         key: globalKey,
@@ -29,7 +29,7 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
-              color: Color.fromRGBO(84, 197, 248, 1),
+              color: Colors.indigo[800],
               child: Center(
                 child: Column(
                   children: <Widget>[
@@ -38,8 +38,8 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
                         alignment: Alignment.bottomCenter,
                         child: Text("Covid care",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
                                 fontSize: 20.0,
+                                color: Colors.white,
                                 height: 2))),
                     Padding(
                         padding: EdgeInsets.all(8),
@@ -51,7 +51,8 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
                               letterSpacing: .5,
                             ),
                           ),
-                        ))
+                        )
+                      ),
                   ],
                 ),
               ),
@@ -64,6 +65,7 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.indigo[800],
         onPressed: () async {
           final ByteData bytes =
               await rootBundle.load('assets/news/covid2.jpeg');
