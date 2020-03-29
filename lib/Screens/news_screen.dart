@@ -51,7 +51,8 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
                               letterSpacing: .5,
                             ),
                           ),
-                        ))
+                        )
+                      ),
                   ],
                 ),
               ),
