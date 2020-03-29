@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Screens/community_screen.dart';
-
-import 'screens/news_screen.dart';
+import 'Screens/news_screen.dart';
 
 void main() {
   runApp(MyApp());
