@@ -11,15 +11,23 @@ class _CommunityViewScreenState extends State<CommunityViewScreen> {
 
   @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+          return new Scaffold(
+            appBar: AppBar(
         title: Text("Community"),
         backgroundColor: Colors.blue,
       ),
-      body: Row(
-        children: [
+      body: new Padding(
+          padding: const EdgeInsets.all(30.0),
+          child:new Column(
+        children: <Widget>[
+          new Row(
+            children: <Widget>[
+            ],
+          ),
+          new Row(
+            children: <Widget>[
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(5),
                 child: Container(
                   alignment: Alignment.topCenter,
                         child: RaisedButton(
@@ -36,7 +44,7 @@ class _CommunityViewScreenState extends State<CommunityViewScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(5),
                 child: Container(
                   alignment: Alignment.topCenter,
                         child: RaisedButton(
@@ -53,20 +61,47 @@ class _CommunityViewScreenState extends State<CommunityViewScreen> {
                 ),
               ),
             ],
-      ),
-  // bottomNavigationBar: Align(
-  //     child: new ListView(
-  //     children: [
-  //               Card(
-  //       child: ListTile(
-  //         leading: FlutterLogo(),
-  //         title: Text('Test post 1'),
-  //       ),
-  //   ),
-  //     ]
-  //     ),
-  // )
-  // This doesnt work correctly. It goes over the other widgets
+          ),
+          new Container(height: 20.0,),
+          new Container(
+          child: 
+          Card(
+            child: ListTile(
+            leading: FlutterLogo(),
+            title: Text('Test post 1'),
+            ),
+          ),
+    ),
+             new Container(
+          child: 
+          Card(
+            child: ListTile(
+            leading: FlutterLogo(),
+            title: Text('Test post 2'),
+            ),
+          ),
+    ),
+                 new Container(
+          child: 
+          Card(
+            child: ListTile(
+            leading: FlutterLogo(),
+            title: Text('Test post 3'),
+            ),
+          ),
+    ),
+                     new Container(
+          child: 
+          Card(
+            child: ListTile(
+            leading: FlutterLogo(),
+            title: Text('Test post 3'),
+            ),
+          ),
+    )
+
+        ],
+      ),),
     );
   }
   }
