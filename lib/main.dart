@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Screens/community_screen.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/news_screen.dart';
+import 'package:splashscreen/splashscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +11,19 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyHome());
+    return MaterialApp(
+        home: SplashScreen(
+            seconds: 4,
+            navigateAfterSeconds: new MyHome(),
+            title: Text(
+              'Welcome to community Tree',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+            ),
+            image: Image.asset('assets/news/covidall.jpeg'),
+            backgroundColor: Colors.white,
+            styleTextUnderTheLoader: TextStyle(),
+            photoSize: 100.0,
+            loaderColor: Colors.red));
   }
 }
 
@@ -22,7 +35,12 @@ class MyHome extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('Community healthcare connected'),
+            title: Text(
+              'Community Tree',
+              style: GoogleFonts.raleway(
+                textStyle: TextStyle(color: Colors.white, letterSpacing: .5),
+              ),
+            ),
             bottom: TabBar(
               tabs: [
                 GestureDetector(
