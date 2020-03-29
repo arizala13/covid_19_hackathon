@@ -13,6 +13,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   path_provider: ^1.6.5
   esys_flutter_share: ^1.0.2
+  google_fonts: ^0.3.10
+  splashscreen: ^1.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
