@@ -105,3 +105,4 @@ class _CommunityViewScreenState extends State<CommunityViewScreen> {
     );
   }
   }
+
