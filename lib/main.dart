@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Screens/community_screen.dart';
 
 import 'screens/news_screen.dart';
 
@@ -35,7 +36,10 @@ class MyHome extends StatelessWidget {
                         text: "Healthcare")),
                 GestureDetector(
                     onTap: () {
-                      print("community clicked");
+                      Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                              builder: (context) => new CommunityViewScreen()));
                     },
                     child: Tab(icon: Icon(Icons.home), text: "Community")),
                 GestureDetector(
@@ -53,11 +57,10 @@ class MyHome extends StatelessWidget {
         ),
       ),
       routes: {
-        // '/': (context) => CommunityViewScreen(),                     //home screen
-        // '/community_screen': (context) => CommunityViewScreen(),
         '/news_screen.': (context) => NewsViewScreen(),
-        //  '/healthcare_Screen': (context) => CommunityViewScreen(),
+        '/community_screen': (context) => CommunityViewScreen(),
       },
     );
+    //  '/healthcare_Screen': (context) => CommunityViewScreen(),
   }
 }
