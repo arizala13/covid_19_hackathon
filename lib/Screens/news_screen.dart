@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:esys_flutter_share/esys_flutter_share.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NewsViewScreen extends StatefulWidget {
   @override
@@ -33,9 +34,24 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
                 child: Column(
                   children: <Widget>[
                     Image.asset('assets/news/covid1.jpeg'),
-                    Text("Covid care"),
-                    Text(
-                        "Take care of youself and other by covering your mouth when you cough"),
+                    Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Text("Covid care",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20.0,
+                                height: 2))),
+                    Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Text(
+                          "Take care of youself and other by covering your mouth when you cough",
+                          style: GoogleFonts.raleway(
+                            textStyle: TextStyle(
+                              color: Colors.white,
+                              letterSpacing: .5,
+                            ),
+                          ),
+                        ))
                   ],
                 ),
               ),
