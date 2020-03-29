@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Screens/community_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'Screens/healthcare_screen.dart';
 import 'screens/news_screen.dart';
 import 'package:splashscreen/splashscreen.dart';
 
@@ -45,13 +46,12 @@ class MyHome extends StatelessWidget {
               tabs: [
                 GestureDetector(
                     onTap: () {
-                      print("Healthcare clicked");
+                      Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                              builder: (context) => new HealthCareScreen()));
                     },
-                    child: Tab(
-                        icon: Icon(
-                          Icons.business,
-                        ),
-                        text: "Healthcare")),
+                    child: Tab(icon: Icon(Icons.business), text: "Healthcare")),
                 GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -75,10 +75,11 @@ class MyHome extends StatelessWidget {
         ),
       ),
       routes: {
+        '/healthcare_screen': (context) => HealthCareScreen(),
         '/news_screen.': (context) => NewsViewScreen(),
         '/community_screen': (context) => CommunityViewScreen(),
       },
     );
-    //  '/healthcare_Screen': (context) => CommunityViewScreen(),
   }
 }
+

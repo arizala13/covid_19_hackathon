@@ -10,11 +10,18 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^0.1.2
   path_provider: ^1.6.5
   esys_flutter_share: ^1.0.2
   google_fonts: ^0.3.10
   splashscreen: ^1.2.0
+  image_picker: ^0.6.4
+  geolocator: 5.0.1
+  image: ^2.0.7
+  flutter_svg:
+  bubble_bottom_bar: ^1.2.0
+  cached_network_image: 2.0.0
+  uuid: 2.0.4
+  cupertino_icons: ^0.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -24,3 +31,9 @@ flutter:
   assets:
     - assets/news/covid1.jpeg
     - assets/news/
+    - assets/images/upload.svg
+    - assets/images/covid.jpg
+    - assets/images/debate.jpg
+    - assets/images/deathofachild.jpg
+    - assets/images/borders.jpg
+    - assets/images/yemen.jpg
