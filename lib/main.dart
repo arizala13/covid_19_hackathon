@@ -36,6 +36,7 @@ class MyHome extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.indigo[800],
             title: Text(
               'Community Tree',
               style: GoogleFonts.raleway(

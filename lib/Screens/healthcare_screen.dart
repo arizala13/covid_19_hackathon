@@ -99,6 +99,10 @@ class _HealthCareScreenState extends State<HealthCareScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    appBar: AppBar(
+        title: Text("Healthcare"),
+        backgroundColor: Colors.indigo[800],
+      ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 4.0),
         decoration: BoxDecoration(
@@ -191,6 +195,7 @@ class _HealthCareScreenState extends State<HealthCareScreen> {
         padding: const EdgeInsets.all(8.0),
         child: FloatingActionButton.extended(
           elevation: 6.0,
+          backgroundColor: Colors.indigo[800],
           icon: const Icon(Icons.add),
           label: const Text('Add Topic'),
           onPressed: () {

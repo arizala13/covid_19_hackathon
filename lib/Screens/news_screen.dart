@@ -18,7 +18,7 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("News"),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.indigo[800],
       ),
       body: RepaintBoundary(
         key: globalKey,
