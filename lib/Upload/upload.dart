@@ -119,7 +119,8 @@ class _UploadState extends State<Upload> {
       isUploading = true;
     });
     await compressImage();
-    String mediaUrl = await uploadImage(file);
+/*     String mediaUrl = await uploadImage(file);
+ */
   }
 
   Container buildUploadForm() {
