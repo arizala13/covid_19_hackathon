@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               'Welcome to community Tree',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
             ),
-            image: Image.asset('assets/news/covidall.jpeg'),
+            image: Image.asset('assets/news/Test-1-square.jpg'),
             backgroundColor: Colors.white,
             styleTextUnderTheLoader: TextStyle(),
             photoSize: 100.0,
@@ -40,23 +40,24 @@ class MyHome extends StatelessWidget {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-              Image.asset(
-                 'assets/images/Logo_Color.png',
+                Image.asset(
+                  'assets/images/Logo_Color.png',
                   fit: BoxFit.contain,
                   height: 35,
                   color: Colors.white,
-              ),
-              Center(
-                    child: Container(
-                      margin: EdgeInsets.all(1.0),
-                      width: 8.0,
-                      height: 8.0,
-                    ),
+                ),
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.all(1.0),
+                    width: 8.0,
+                    height: 8.0,
                   ),
+                ),
                 Text(
                   'Community Tree',
                   style: GoogleFonts.raleway(
-                    textStyle: TextStyle(color: Colors.white, letterSpacing: .75),
+                    textStyle:
+                        TextStyle(color: Colors.white, letterSpacing: .75),
                   ),
                 ),
               ],
@@ -101,4 +102,3 @@ class MyHome extends StatelessWidget {
     );
   }
 }
-

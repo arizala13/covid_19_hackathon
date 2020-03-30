@@ -33,7 +33,7 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
               child: Center(
                 child: Column(
                   children: <Widget>[
-                    Image.asset('assets/news/covid1.jpeg'),
+                    Image.asset('assets/news/Test-1-square.jpg'),
                     Align(
                         alignment: Alignment.bottomCenter,
                         child: Text("Covid care",
@@ -51,8 +51,7 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
                               letterSpacing: .5,
                             ),
                           ),
-                        )
-                      ),
+                        )),
                   ],
                 ),
               ),
@@ -68,10 +67,10 @@ class _NewsViewScreenState extends State<NewsViewScreen> {
         backgroundColor: Colors.indigo[800],
         onPressed: () async {
           final ByteData bytes =
-              await rootBundle.load('assets/news/covid2.jpeg');
+              await rootBundle.load('assets/news/Test-1.jpg');
 
-          await Share.file('Were thinking about you,take care', 'staysafe.jpeg',
-                  bytes.buffer.asUint8List(), 'image/jpeg',
+          await Share.file('Were thinking about you,take care', 'staysafe.jpg',
+                  bytes.buffer.asUint8List(), 'image/jpg',
                   text: 'image')
               .catchError((e) {
             print(e);
