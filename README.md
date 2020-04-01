@@ -16,8 +16,8 @@ Community tree is an open source project and we would welcome and love if you wa
 
 ![](https://github.com/arizala13/covid_19_hackathon/blob/master/app-pictures/4.jpeg)
 
-![](https://github.com/arizala13/covid_19_hackathon/blob/master/app-pictures/3.jpeg)
-
 ![](https://github.com/arizala13/covid_19_hackathon/blob/master/app-pictures/2.jpeg)
 
 ![](https://github.com/arizala13/covid_19_hackathon/blob/master/app-pictures/1.jpeg)
+
+![](https://github.com/arizala13/covid_19_hackathon/blob/master/app-pictures/3.jpeg)
